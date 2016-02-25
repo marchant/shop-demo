@@ -19,28 +19,34 @@
         "brand": {
             "prototype": "montage/ui/text.reel",
             "properties": {
-                "element": {"#": "brand"}
+                "element": {"#": "brand"},
+                "contenteditable": "false",
+                "draggable": "false"
             },
             "bindings": {
                 "value": {"<-": "@owner.product.brand"}
             }
         },
-        "description": {
-            "prototype": "montage/ui/text.reel",
-            "properties": {
-                "element": {"#": "description"}
-            },
-            "bindings": {
-                "value": {"<-": "@owner.product.description"}
-            }
-        },
         "color": {
             "prototype": "montage/ui/text.reel",
             "properties": {
-                "element": {"#": "color"}
+                "element": {"#": "color"},
+                "contenteditable": "false",
+                "draggable": "false"
             },
             "bindings": {
                 "value": {"<-": "@owner.product.color"}
+            }
+        },
+        "description": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "description"},
+                "contenteditable": "false",
+                "draggable": "false"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.product.description"}
             }
         }
     }

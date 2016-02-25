@@ -1,0 +1,48 @@
+{
+  "blueprint_component_reference": {
+    "prototype": "montage/core/meta/blueprint-reference",
+    "properties": {
+      "valueReference": {
+        "blueprintName": "Component",
+        "blueprintModule": {
+          "%": "montage/ui/component.meta"
+        }
+      }
+    }
+  },
+  "blueprint_unnamed_image": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "image",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "blueprint_unnamed_background": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "background",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "root": {
+    "prototype": "montage/core/meta/module-blueprint",
+    "properties": {
+      "name": null,
+      "parent": {"@": "blueprint_component_reference"},
+      "propertyBlueprints": [
+        {"@": "blueprint_unnamed_image"},
+        {"@": "blueprint_unnamed_background"}
+      ],
+      "propertyBlueprintGroups": {
+        "ProductsCarouselItem": [
+          {"@": "blueprint_unnamed_image"},
+          {"@": "blueprint_unnamed_background"}
+        ]
+      },
+      "module": {
+        "%": "ui/products-carousel-item.reel"
+      },
+      "exportName": "ProductsCarouselItem"
+    }
+  }
+}
